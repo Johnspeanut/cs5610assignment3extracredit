@@ -1,0 +1,85 @@
+.App {
+  text-align: left;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'gridHeader gridHeader gridHeader'
+    'gridLeft gridCenter gridRight'
+    'gridFoot gridFoot gridFoot';
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  gap: 2px;
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: calc(10px + 1vmin);
+  color: white;
+}
+
+gridHeader {
+  grid-area: gridHeader;
+  text-align: center;
+}
+
+gridCenter {
+  grid-area: gridCenter;
+  display: inline-grid;
+  justify-items: center;
+  align-items: center;
+}
+
+gridLeft {
+  grid-area: gridLeft;
+  list-style-type: none;
+}
+
+gridRight {
+  grid-area: gridRight;
+}
+
+gridFoot {
+  grid-area: gridFoot;
+  text-align: center;
+}
+
+box {
+  height: 60px;
+  width: 60px;
+  float: left;
+  background: red;
+  border: 1px black solid;
+  color: #fff;
+  margin-left: 20px;
+  text-align: left;
+  transition: 500ms;
+  opacity:0.8;
+}
+
+box:hover {
+  height: 120px;
+  width: 120px;
+  color: red;
+  background-color: green;
+  opacity:1;
+}
+
+@media (max-width: 600px) {
+  box {
+    border: 0;
+  }
+}
+
+ul{
+  list-style-type: none;
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(239, 245, 239);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(241, 93, 8);
+}
